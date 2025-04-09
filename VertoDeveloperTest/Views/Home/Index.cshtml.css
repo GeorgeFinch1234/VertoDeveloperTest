@@ -63,6 +63,42 @@ transform:translate(0%,-50%);
     padding:20px;
 }
 
+
+
+/*
+    explore out latest work
+*/
+
+#LatestWork h2{
+    text-align:center;
+    padding:30px;
+}
+#LatestWorkExamples{
+    display:flex;
+ 
+   
+}
+#LatestWorkExamples img{
+    width:100%;
+    filter:brightness(70%);
+}
+#LatestWork figure{
+    position:relative;
+}
+#workText {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 2;
+    color: white;
+    width:90%;
+}
+/*
+    global
+*/
+h2{
+    font-size:30px;
+}
 /* 
     buttons
 */
@@ -70,12 +106,13 @@ transform:translate(0%,-50%);
     color: white;
     border-radius: 15px;
     padding: 15px;
-    width:fit-content;
+    width: fit-content;
 }
-.mustard{
-    background-color:#DDB62E;
-}
-.teal{
-        background-color:#18BEAB;
 
+.mustard {
+    background-color: #DDB62E;
+}
+
+.teal {
+    background-color: #18BEAB;
 }
