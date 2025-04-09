@@ -118,7 +118,7 @@ transform:translate(0%,-50%);
 #discoverMore{
     position:relative;
     overflow:hidden;
-    height:700px;
+    height:600px;
     
 }
     #discoverMore img{
@@ -143,12 +143,46 @@ transform:translate(0%,-50%);
         #discoverMoreText * {
             color: white;
         }
-    /*
+    
+        /*
+            footer
+        */
+footer{
+    background-color:#333333;
+    border-radius: 0px 0px 20px 20px;
+}
+footer *{
+    color:white;
+    margin:0;
+
+}
+#topFooterInfo{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:20px;
+    padding:20px;
+    
+}
+#topMidFooterInfo{
+    border-bottom:1px solid white;
+}
+    #topMidFooterInfo div, #bottomMidFooterInfo div{
+                display:flex;
+        flex-direction:column;
+        
+      
+    }
+
+#topMidFooterInfo div {
+    padding-bottom: 20px;
+}
+        /*
     global
 */
-    h2 {
-        font-size: 30px;
-    }
+        h2 {
+            font-size: 30px;
+        }
 /* 
     buttons
 */
