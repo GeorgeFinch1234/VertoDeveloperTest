@@ -19,6 +19,7 @@ html {
 
 body {
   margin: 20px;
+  margin-top:0px;
 }
 
 .slick-dots {

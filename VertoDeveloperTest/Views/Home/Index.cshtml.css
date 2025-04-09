@@ -177,12 +177,41 @@ footer *{
 #topMidFooterInfo div {
     padding-bottom: 20px;
 }
-        /*
+     
+/*
+    header
+*/
+#mobileOptions{
+    display:flex;
+    align-items:end;
+    justify-content:end;
+    gap:20px;
+    position:relative;
+    top:50%;
+    font-size:25px;
+}
+header img{
+   position:absolute;
+   top:50%;
+   transform:translate(0%,-50%);
+}
+header{
+    position:relative;
+    height:150px;
+}
+#HaveAProject{
+position:absolute;
+top:0px;
+right:10px;
+border-radius: 0px 0px 20px 20px;
+
+}
+/*
     global
 */
-        h2 {
-            font-size: 30px;
-        }
+h2 {
+    font-size: 30px;
+}
 /* 
     buttons
 */
