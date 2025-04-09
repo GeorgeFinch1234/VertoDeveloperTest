@@ -112,13 +112,43 @@ transform:translate(0%,-50%);
 #fourAreas img{
     height:20%;
 }
-
 /*
+    discover more
+*/
+#discoverMore{
+    position:relative;
+    overflow:hidden;
+    height:700px;
+    
+}
+    #discoverMore img{
+        filter:brightness(70%);
+    }
+    #discoverMoreText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width:75%;
+    }
+        #discoverMoreText :not(.btn){
+            padding-bottom:25px;
+        }
+        #discoverMoreText * {
+            color: white;
+        }
+    /*
     global
 */
-h2{
-    font-size:30px;
-}
+    h2 {
+        font-size: 30px;
+    }
 /* 
     buttons
 */
