@@ -64,9 +64,25 @@ namespace VertoDeveloperTest.Controllers
 
             return View("Index");
         }
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-            return View();
+            return View(_context.Carousels.Find(id));
+        }
+        public IActionResult editCompleted(int id, IFormFile image, String title)
+        {
+            _context.Carousels.Find(id).Title = title;
+            if (image != null)
+            {
+                MemoryStream stream = new MemoryStream();
+                image.CopyTo(stream);
+                Byte[] data = stream.ToArray();
+
+
+                _context.Carousels.Find(id).Img = data;
+            }
+                _context.SaveChanges();
+
+            return View("Index");
         }
     }
 }
