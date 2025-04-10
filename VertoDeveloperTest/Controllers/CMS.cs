@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using VertoDeveloperTest.Models;
 using static System.Net.Mime.MediaTypeNames;
 using VertoDeveloperTest.Models;
+using System.Diagnostics.Eventing.Reader;
 
 namespace VertoDeveloperTest.Controllers
 {
@@ -16,9 +18,17 @@ namespace VertoDeveloperTest.Controllers
         {
             return View();
         }
-        public IActionResult Create(IFormFile image, String title)
+        public IActionResult Upload(IFormFile image, String title, Validator validator)
         {
+            ViewData["ErrorMessage"] = "";
+            String test = validator.ValidateTitle(title);
 
+            if (test == "")
+            {
+                test = validator.ValidateImage(image);
+            }
+
+            if (test == "") { 
             MemoryStream stream = new MemoryStream();
             image.CopyTo(stream);
             Byte[] data = stream.ToArray();
@@ -30,6 +40,17 @@ namespace VertoDeveloperTest.Controllers
             _context.Add(carousel);
             _context.SaveChanges();
             return View("Index");
+            }
+            else
+            {
+                ViewData["ErrorMessage"] = test;
+                return View("Create");
+            }
+
+        }
+        public IActionResult Create()
+        {
+            return View();
         }
         public IActionResult Delete()
         {
