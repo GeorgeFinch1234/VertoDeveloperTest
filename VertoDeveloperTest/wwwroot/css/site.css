@@ -18,5 +18,23 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin: 20px;
+  margin-top:0px;
+}
+
+.slick-dots {
+    position: absolute;
+    z-index: 10;
+    top: 90%;
+    
+}
+    .slick-dots li button {
+        border: 1px solid white !important;
+        border-radius: 100%;
+    }
+    /*
+        gets rid of that white line under it
+    */
+.slick-list{
+    height:100% !important;
 }

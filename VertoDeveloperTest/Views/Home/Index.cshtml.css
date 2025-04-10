@@ -1,0 +1,355 @@
+﻿body {
+}
+.slickItem {
+    overflow:hidden;
+    border-radius:20px 20px 0px 0px;
+    width:100%;
+    height:700px;
+    position:relative;
+    margin-bottom:0;
+    
+}
+.slick{
+    margin-bottom:0 !important;
+}
+.slickItem img{
+    width:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    display:block;
+
+}
+    .slickItem p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index:2;
+        color:white;
+        text-align:center;
+        font-size:45px;
+    }
+  
+    /*
+        four circles
+    */
+#fourCricle{
+    background-color:#f4f4f4;
+    position:relative;
+    padding-top:60px;
+}
+#fourCricle img {
+    width: 100%;
+}
+#exploreOurWork {
+    position: absolute;
+    top:0px;
+    right: 0px;
+transform:translate(0%,-50%);
+    z-index:2;
+    border-radius:15px 0px 15px 15px;
+    
+}
+#fourCricleTop{
+    padding:20px;
+}
+#fourCricleNested{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:20px;
+    padding:20px;
+}
+
+
+
+/*
+    explore out latest work
+*/
+#LWE2, #LWE3{
+    display:none;
+}
+#LatestWork h2{
+    text-align:center;
+    padding:30px;
+}
+#LatestWorkExamples{
+    display:flex;
+ align-items:center;
+ justify-content:space-around;
+ gap:20px;
+
+
+   
+}
+#LatestWorkExamples img{
+    width:100%;
+    filter:brightness(70%);
+}
+#LatestWork figure{
+    position:relative;
+}
+#workText {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 2;
+    color: white;
+    width:90%;
+}
+
+
+/*
+    four areas
+*/
+
+#fourAreas{
+    display:flex;
+    flex-direction:column;
+    background-color:#2A4351;
+    border-radius:20px 20px 0px 0px;
+    align-items:center;
+    padding:20px;
+    gap:20px;
+    height:500px;
+}
+#fourAreas img{
+    height:20%;
+}
+#discoverMoreBtn{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    align-content:center;
+}
+/*
+    discover more
+*/
+#discoverMore {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+    #discoverMore img{
+        filter:brightness(70%);
+    }
+    #discoverMoreText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width:75%;
+    }
+        #discoverMoreText :not(.btn){
+            padding-bottom:25px;
+        }
+        #discoverMoreText * {
+            color: white;
+        }
+    
+        /*
+            footer
+        */
+footer {
+    background-color: #333333;
+    border-radius: 0px 0px 20px 20px;
+    padding: 20px;
+}
+
+footer *{
+    color:white;
+    margin:0;
+
+}
+#topFooterInfo{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:20px;
+    padding-top:20px;
+    
+    
+}
+#topMidFooterInfo{
+    border-bottom:1px solid white;
+}
+    #topMidFooterInfo div, #bottomMidFooterInfo div{
+                display:flex;
+        flex-direction:column;
+        
+      
+    }
+
+#topMidFooterInfo div {
+    padding-bottom: 20px;
+}
+     
+/*
+    header
+*/
+#menuBar{
+    display:none;
+}
+#mobileOptions {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+    position: relative;
+    top: 50%;
+    font-size: 25px;
+}
+header img{
+   position:absolute;
+   top:50%;
+   transform:translate(0%,-50%);
+}
+header{
+    position:relative;
+    height:150px;
+}
+#HaveAProject{
+position:absolute;
+top:0px;
+right:10px;
+border-radius: 0px 0px 20px 20px;
+
+}
+/*
+    global
+*/
+h2 {
+    font-size: 30px;
+}
+/* 
+    buttons
+*/
+.btn {
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: fit-content;
+}
+
+.mustard {
+    background-color: #DDB62E;
+}
+
+.teal {
+    background-color: #18BEAB;
+}
+
+@media screen and (min-width: 768px){
+    /* 
+        example work
+    */
+    #LWE2{
+        display:block;
+    }
+   #LatestWorkExamples{
+       justify-content:center;
+       gap:20px;
+   }
+    /*
+                four areas
+    
+    */
+    #fourAreas {
+        flex-direction: row;
+        height: fit-content;
+        justify-content: space-around;
+        padding: 40px;
+    }
+    /*
+        discover more
+    */
+    #discoverMoreBtn{
+        flex-direction:row;
+        justify-content:center;
+        gap:20px;
+    }
+    #topMidFooterInfo, #bottomMidFooterInfo {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: start;
+    }
+    /*
+        four cricles
+    */
+    #fourCricleTop{
+        padding:60px;
+        width:90%;
+        
+    }
+    #fourCricleNested{
+        padding-left:60px;
+    }
+        
+    /*
+        global
+    */
+    h2{
+                font-size: 50px;
+    }
+    p{
+        font-size:20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /*
+    Explore out latest work
+*/
+    #LWE3{
+        display: block;
+    }
+    /*
+        footer
+    */
+    #topMidFooterInfo{
+border-bottom:0px;
+    }
+    #topFooterInfo{
+        flex-direction:row;
+        justify-content:center;
+        gap:20px;
+        
+       
+    }
+    #topMidFooterInfo, #bottomMidFooterInfo{
+        width:500px;
+        gap:20px;
+       
+    }
+    /*
+        four circles
+    */
+    #fourCricle{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+    }
+    #menuBar{
+        display:flex;
+        gap:20px;
+        justify-content:end;
+    }
+    #hamburger{
+        display:none;
+    }
+    #Home{
+        color: #DDB62E;
+    }
+}
