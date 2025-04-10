@@ -1,0 +1,22 @@
+﻿@model IEnumerable<VertoDeveloperTest.Models.Carousel>
+
+<div>
+    <p>test</p>
+    @{
+        if (Model is not null)
+        {
+            foreach (var item in Model)
+            {
+                <p>@item.ID </p>
+                <p>@item.Title </p>
+                <img src="data:image/png;base64,@Convert.ToBase64String(item.Img)" alt="Image" />
+                <p>@item.Img </p>
+                <a>delete</a>
+                <a>edit</a>
+                
+            }
+        }
+
+    }
+</div>
+<a href="CMS/create">create</a>
