@@ -1,10 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using VertoDeveloperTest.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<IValidator, Validator>();
 //adds database for DI
 builder.Services.AddDbContext<iOTAContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
