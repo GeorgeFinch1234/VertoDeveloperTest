@@ -39,7 +39,7 @@ namespace VertoDeveloperTest.Controllers
 
             _context.Add(carousel);
             _context.SaveChanges();
-            return View("Index");
+            return View("Index", _context.Carousels);
             }
             else
             {
@@ -62,7 +62,7 @@ namespace VertoDeveloperTest.Controllers
             _context.Carousels.Remove(_context.Carousels.Find(id));
             _context.SaveChanges();
 
-            return View("Index");
+            return View("Index", _context.Carousels);
         }
         public IActionResult Edit(int id)
         {
@@ -82,7 +82,7 @@ namespace VertoDeveloperTest.Controllers
             }
                 _context.SaveChanges();
 
-            return View("Index");
+            return View("Index", _context.Carousels);
         }
     }
 }
