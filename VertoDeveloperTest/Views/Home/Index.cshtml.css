@@ -68,14 +68,20 @@ transform:translate(0%,-50%);
 /*
     explore out latest work
 */
-
+#LWE2, #LWE3{
+    display:none;
+}
 #LatestWork h2{
     text-align:center;
     padding:30px;
 }
 #LatestWorkExamples{
     display:flex;
- 
+ align-items:center;
+ justify-content:space-around;
+ gap:20px;
+
+
    
 }
 #LatestWorkExamples img{
@@ -112,14 +118,21 @@ transform:translate(0%,-50%);
 #fourAreas img{
     height:20%;
 }
+#discoverMoreBtn{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    align-content:center;
+}
 /*
     discover more
 */
-#discoverMore{
-    position:relative;
-    overflow:hidden;
-    height:600px;
-    
+#discoverMore {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
 }
     #discoverMore img{
         filter:brightness(70%);
@@ -231,4 +244,61 @@ h2 {
 
 .teal {
     background-color: #18BEAB;
+}
+
+@media screen and (min-width: 768px){
+    /* 
+        example work
+    */
+    #LWE2{
+        display:block;
+    }
+   #LatestWorkExamples{
+
+   }
+    /*
+                four areas
+    
+    */
+    #fourAreas {
+        flex-direction: row;
+        height: fit-content;
+        justify-content: space-around;
+        padding: 40px;
+    }
+    /*
+        discover more
+    */
+    #discoverMoreBtn{
+        flex-direction:row;
+        justify-content:center;
+        gap:20px;
+    }
+    #topMidFooterInfo, #bottomMidFooterInfo {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: start;
+    }
+    /*
+        four cricles
+    */
+    #fourCricleTop{
+        padding:60px;
+        width:90%;
+        
+    }
+    #fourCricleNested{
+        padding-left:60px;
+    }
+        
+    /*
+        global
+    */
+    h2{
+                font-size: 50px;
+    }
+    p{
+        font-size:20px;
+    }
 }
