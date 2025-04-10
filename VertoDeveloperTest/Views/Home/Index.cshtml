@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<VertoDeveloperTest.Models.Carousel>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -23,23 +24,48 @@
     </div>
 </header>
 
+<!-- tbd 
+@{
+    if (Model is not null)
+    {
+        foreach (var item in Model)
+        {
+                            <p>@item.ID </p>
+                            <p>@item.Title </p>
+                            <img src="data:image/png;base64,@Convert.ToBase64String(item.Img)" alt="Image" />
+                            <p>@item.Img </p>
+                            <a>delete</a>
+                            <a>edit</a>
+
+        }
+    }
+
+}
+
+
+
+
+
+-->
+
+
+
 <div class="slick">
-   <figure class="slickItem">
-        <img src="assets/image4.png"/>
-              <p>Creating Exceptional Workspaces</p>
-   </figure>
-    <figure class="slickItem">
-        <img src="assets/image4.png" />
-        <p>Creating Exceptional Workspaces</p>
-    </figure>
-    <figure class="slickItem">
-        <img src="assets/image4.png" />
-        <p>Creating Exceptional Workspaces</p>
-    </figure>
-    <figure class="slickItem">
-        <img src="assets/image4.png" />
-        <p>Creating Exceptional Workspaces</p>
-    </figure>
+
+    @{
+        if (Model is not null)
+        {
+            foreach (var item in Model)
+            {
+                <figure class="slickItem">
+                    <img src="data:image/png;base64,@Convert.ToBase64String(item.Img)" alt="Image" />
+        
+                    <p>@item.Title</p>
+                </figure>
+            }
+        }
+        }
+       
 </div>
 <section id="fourCricle">
     <p class="btn teal" id="exploreOurWork">&#8595 EXPLORE OUR WORK</p>
