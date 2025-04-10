@@ -52,9 +52,17 @@ namespace VertoDeveloperTest.Controllers
         {
             return View();
         }
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
-            return View();
+            
+            return View(_context.Carousels.Find(id));
+        }
+        public IActionResult confirmedDelete(int id)
+        {
+            _context.Carousels.Remove(_context.Carousels.Find(id));
+            _context.SaveChanges();
+
+            return View("Index");
         }
         public IActionResult Edit()
         {
