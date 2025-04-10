@@ -9,7 +9,7 @@ namespace VertoDeveloperTest.Models
             if (!(title is String))
             {
                 return "title must be a string";
-            }else if (!Regex.IsMatch(title, "^[0-9A-Za-z.,?]*$"))
+            }else if (!Regex.IsMatch(title, "^[0-9A-Za-z.,? ]*$"))
             {
                 return "only A-z 0-9 , . ? allowed";
             }
