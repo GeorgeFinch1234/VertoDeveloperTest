@@ -1,5 +1,15 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model VertoDeveloperTest.Models.Carousel
+
+
+<form action="/CMS/editCompleted/@Model.ID" method="post" enctype="multipart/form-data">
+
+    <label for="title">title</label>
+    <input type="text" name="title" value="@Model.Title"/>
+    <label for="image">image</label>
+    <input type="file" name="image" accept=".png,.jpg" />
+    <label for="submit">submit</label>
+    <input type="submit" name="submit" />
+    <p id="errorMessage">@ViewData["ErrorMessage"]</p>
+
+
+</form>

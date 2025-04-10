@@ -11,7 +11,7 @@
                 <p>@item.Title </p>
                 <img src="data:image/png;base64,@Convert.ToBase64String(item.Img)" alt="Image" />
                 <a href="/CMS/Delete/@item.ID">delete</a>
-                <a>edit</a>
+                <a href="/cms/edit/@item.ID">edit</a>
                 
             }
         }
