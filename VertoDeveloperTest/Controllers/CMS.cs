@@ -16,7 +16,7 @@ namespace VertoDeveloperTest.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            return View(_context.Carousels);
         }
         public IActionResult Upload(IFormFile image, String title, Validator validator)
         {

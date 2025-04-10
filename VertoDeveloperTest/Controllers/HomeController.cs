@@ -8,14 +8,19 @@ namespace VertoDeveloperTest.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        private readonly iOTAContext _context;
+       
+
+        public HomeController(ILogger<HomeController> logger, iOTAContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_context.Carousels);
         }
 
         public IActionResult Privacy()
