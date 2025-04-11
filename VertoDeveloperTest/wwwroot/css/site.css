@@ -42,14 +42,10 @@ body {
 
 
 
-
-h1 {
-    text-align: center;
-    padding: 20px;
-    font-size: 30px
-}
-
-form {
+/*
+    as css isolation doest work unless plain html node.
+*/
+.createForm {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,22 +54,9 @@ form {
     gap: 15vh;
 }
 
-    form div {
+    .createForm div {
         display: flex;
         gap: 20px;
         align-items: center;
         justify-content: center;
     }
-
-input[type="file"] {
-    width: 75%;
-}
-
-#btnSubmit {
-    width: 300px;
-    height: 60px;
-}
-
-label, p, input {
-    font-size: 15px
-}
