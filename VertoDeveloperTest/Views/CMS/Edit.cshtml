@@ -1,7 +1,7 @@
 ﻿@model VertoDeveloperTest.Models.Carousel
 
 
-<h1>Create</h1>
+<h1>Edit</h1>
 
 <form class="createForm" action="/CMS/Upload" method="post" enctype="multipart/form-data">
     <div>
@@ -13,8 +13,10 @@
         <input type="file" name="image" accept=".png,.jpg" id="fsFile" />
     </div>
 
-
+    <div>
     <input type="submit" name="submit" id="btnSubmit" aria-label="submit" />
+        <a href="/cms/index">Cancel</a>
+    </div>
 
     <p id="errorMessage">@ViewData["ErrorMessage"]</p>
 

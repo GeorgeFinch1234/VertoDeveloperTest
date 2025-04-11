@@ -14,11 +14,20 @@ input[type="file"] {
     width: 75%;
 }
 
-#btnSubmit {
-    width: 300px;
-    height: 60px;
-}
+
 
 label, p, input {
     font-size: 15px
+}
+
+a, input[type=submit] {
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #18BEAB;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    border:none;
 }

@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<VertoDeveloperTest.Models.Carousel>
-<a href="/CMS/create" id="create">create</a>
+<a href="/CMS/create" id="Create">Create</a>
+<a href="/" id="Home">Home</a>
 <div id="CMSSlickList">
     
     @{
@@ -13,8 +14,8 @@
                 <img src="data:image/png;base64,@Convert.ToBase64String(item.Img)" alt="Image" />
                 </div>
                 <div class="cmsIndexBtn">
-                <a href="/CMS/Delete/@item.ID">delete</a>
-                <a href="/cms/edit/@item.ID">edit</a>
+                <a href="/CMS/Delete/@item.ID">Delete</a>
+                <a href="/cms/edit/@item.ID">Edit</a>
                 </div>
                 
             }
