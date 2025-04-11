@@ -1,0 +1,21 @@
+﻿
+<h1>Create</h1>
+
+<form action="/CMS/Upload" method="post" enctype="multipart/form-data">
+    <div>
+    <label for="title" id="lblTitle">title</label>
+    <input type="text" name="title" id="txtTitle" />
+   </div>
+   <div>
+    <label for="image" id="lblImage">image</label>
+    <input type="file" name="image" accept=".png,.jpg" id="fsFile" />
+    </div>
+    
+    
+    <input type="submit" name="submit" id="btnSubmit" aria-label="submit"/>
+   
+    <p id="errorMessage">@ViewData["ErrorMessage"]</p>
+
+
+</form>
+

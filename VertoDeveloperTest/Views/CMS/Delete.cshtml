@@ -1,0 +1,13 @@
+﻿@model VertoDeveloperTest.Models.Carousel
+
+<h1>Are you sure you want to delete</h1>
+
+<div class="slickItem">
+    <p>@Model.Title </p>
+    <img src="data:image/png;base64,@Convert.ToBase64String(Model.Img)" alt="Image" />
+</div>
+
+<div class="cmsIndexBtn">
+<a href="/cms/confirmedDelete/@Model.ID">yes</a>
+<a href="/cms/index">no</a>
+</div>
