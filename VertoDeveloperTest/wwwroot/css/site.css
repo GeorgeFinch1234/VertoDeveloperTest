@@ -45,18 +45,29 @@ body {
 /*
     as css isolation doest work unless plain html node.
 */
+
+
 .createForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 75vh;
-    gap: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align:center;
+    row-gap:20px;
+}
+  
+.createForm *{
+    grid-column: span 2;
+    align-self:center;
+    
 }
 
-    .createForm div {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
+input [type="file"] {
+    width: 75%;
+}
+@media screen and (min-width: 768px) {
+    .createForm :nth-child(1), .createForm :nth-child(2) {
+        grid-column: span 1;
+        
     }
+    
+}
+

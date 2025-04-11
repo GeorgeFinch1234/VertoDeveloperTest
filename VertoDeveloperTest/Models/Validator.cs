@@ -4,12 +4,15 @@ namespace VertoDeveloperTest.Models
 {
     public class Validator : IValidator
     {
-        public String ValidateTitle(String title)
+        public String ValidateTitle(String? title)
         {
-            if (!(title is String))
+
+
+            if (String.IsNullOrEmpty(title))
             {
+                
                 return "title must be a string";
-            }else if (!Regex.IsMatch(title, "^[0-9A-Za-z.,? ]*$"))
+            } else if (!Regex.IsMatch(title, "^[0-9A-Za-z.,? ]*$"))
             {
                 return "only A-z 0-9 , . ? allowed";
             }
@@ -22,7 +25,7 @@ namespace VertoDeveloperTest.Models
                 return "";
             }
         }
-        public String ValidateImage(IFormFile image)
+        public String ValidateImage(IFormFile? image)
         {
             if (image == null)
             {
@@ -36,6 +39,25 @@ namespace VertoDeveloperTest.Models
             {
                 return "";
             }
+        }
+        public String ValidateOptionalImage(IFormFile? image)
+        {
+            if (image != null)
+            {
+                if (image.ContentType != "image/jpeg" && image.ContentType != "image/png")
+                {
+                    return "Image must be a jpeg or png";
+                }
+                else
+                {
+                    return "";
+                }
+            }
+            else
+            {
+                return "";
+            }
+           
         }
     }
 }

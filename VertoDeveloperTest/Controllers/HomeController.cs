@@ -20,6 +20,7 @@ namespace VertoDeveloperTest.Controllers
 
         public IActionResult Index()
         {
+           
             return View(_context.Carousels);
         }
 

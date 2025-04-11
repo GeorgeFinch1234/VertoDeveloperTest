@@ -3,18 +3,18 @@
 
 <h1>Edit</h1>
 
-<form class="createForm" action="/CMS/Upload" method="post" enctype="multipart/form-data">
+<form class="createForm" action="/CMS/editCompleted/@Model.ID" method="post" enctype="multipart/form-data">
     <div>
-        <label for="title" id="lblTitle">title</label>
-        <input type="text" name="title" id="txtTitle" value="@Model.Title" />
+        <label for="title" >title</label>
+        <input type="text" name="title"  value="@Model.Title" class="FormTitle"/>
     </div>
     <div>
-        <label for="image" id="lblImage">image</label>
-        <input type="file" name="image" accept=".png,.jpg" id="fsFile" />
+        <label for="image" >image</label>
+        <input type="file" name="image" accept=".png,.jpg" class="FormImg" />
     </div>
 
-    <div>
-    <input type="submit" name="submit" id="btnSubmit" aria-label="submit" />
+    <div class="createEditBtn">
+    <input type="submit" name="submit" aria-label="submit" />
         <a href="/cms/index">Cancel</a>
     </div>
 
@@ -22,4 +22,10 @@
 
 
 </form>
+
+<div class="slickItem">
+    <p class="outPutTitle">@Model.Title </p>
+    <img src="data:image/png;base64,@Convert.ToBase64String(Model.Img)" alt="Image" class="OutputImg"/>
+</div>
+
 
