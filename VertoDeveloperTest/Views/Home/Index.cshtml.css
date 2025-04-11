@@ -4,7 +4,7 @@
     overflow:hidden;
     border-radius:20px 20px 0px 0px;
     width:100%;
-    height:700px;
+    height:600px;
     position:relative;
     margin-bottom:0;
     
@@ -40,6 +40,10 @@
     background-color:#f4f4f4;
     position:relative;
     padding-top:60px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 #fourCricle img {
     width: 100%;
@@ -288,6 +292,9 @@ h2 {
     /*
         four cricles
     */
+    #fourCricle{
+
+    }
     #fourCricleTop{
         padding:60px;
         width:90%;
@@ -295,6 +302,9 @@ h2 {
     }
     #fourCricleNested{
         padding-left:60px;
+    }
+    #fourCricle img {
+        width: 500px;
     }
         
     /*
@@ -342,10 +352,16 @@ border-bottom:0px;
         justify-content:center;
         align-items:center;
     }
-    #menuBar{
-        display:flex;
-        gap:20px;
-        justify-content:end;
+
+    #fourCricleTop{
+        width:50%;
+    }
+
+
+    #menuBar {
+        display: flex;
+        gap: 20px;
+        justify-content: end;
     }
     #hamburger{
         display:none;
