@@ -18,7 +18,7 @@ namespace VertoDeveloperTest.Controllers
         {
             return View(_context.Carousels);
         }
-        public IActionResult Upload(IFormFile image, String title, Validator validator)
+        public IActionResult Upload(IFormFile? image, String? title, Validator validator)
         {
             ViewData["ErrorMessage"] = "";
             String test = validator.ValidateTitle(title);
@@ -68,21 +68,50 @@ namespace VertoDeveloperTest.Controllers
         {
             return View(_context.Carousels.Find(id));
         }
-        public IActionResult editCompleted(int id, IFormFile image, String title)
+        public IActionResult editCompleted(IFormFile? image, String? title, int id, Validator validator)
         {
-            _context.Carousels.Find(id).Title = title;
-            if (image != null)
+            
+
+            ViewData["ErrorMessage"] = "";
+
+            String test = validator.ValidateTitle(title);
+           
+
+            if (test.Equals(""))
             {
-                MemoryStream stream = new MemoryStream();
-                image.CopyTo(stream);
-                Byte[] data = stream.ToArray();
-
-
-                _context.Carousels.Find(id).Img = data;
+                test = validator.ValidateOptionalImage(image);
             }
-                _context.SaveChanges();
 
-            return View("Index", _context.Carousels);
+            if (test.Equals(""))
+            {
+                if(!(image is null))
+                {
+                    MemoryStream stream = new MemoryStream();
+                    image.CopyTo(stream);
+                    Byte[] data = stream.ToArray();
+
+
+                    _context.Carousels.Find(id).Img = data;
+                    _context.SaveChanges();
+                }
+               
+                if (!(title is null))
+                {
+                    _context.Carousels.Find(id).Title = title;
+                    _context.SaveChanges();
+                }
+               
+
+                
+
+                return View("Index", _context.Carousels);
+            }
+            else
+            {
+                
+                ViewData["ErrorMessage"] = test;
+                return View("Edit", _context.Carousels.Find(id));
+            }
         }
     }
 }
