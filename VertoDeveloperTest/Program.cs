@@ -1,8 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using VertoDeveloperTest.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSingleton<IValidator, Validator>();
+//adds database for DI
+builder.Services.AddDbContext<iOTAContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,4 +32,26 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+//sets up database if needed
+CreateDbIfNotExists(app);
+
+
 app.Run();
+
+
+static void CreateDbIfNotExists(IHost host)
+{
+    using (var scope = host.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+        try
+        {
+            var context = services.GetRequiredService<iOTAContext>();
+            DbInitializer.Initialize(context);
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+}
