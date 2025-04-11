@@ -12,14 +12,13 @@
 .slick{
     margin-bottom:0 !important;
 }
-.slickItem img{
-    width:100%;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    display:block;
-
+.slickItem img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    filter: brightness(70%);
 }
     .slickItem p {
         position: absolute;
