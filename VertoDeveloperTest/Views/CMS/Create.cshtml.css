@@ -7,7 +7,9 @@ h1 {
 }
 
 
-
+label, p, input {
+    font-size: 20px
+}
 
 
 a, input[type=submit] {

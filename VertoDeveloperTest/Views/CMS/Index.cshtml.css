@@ -39,20 +39,20 @@
     gap:20px;
     padding:20px;
 }
-     a {
-        text-decoration: none;
-        border-radius: 20px;
-        background-color: #18BEAB;
-        color:white;
-        font-size:20px;
-        width:100px;
-        padding:20px;
-        text-align:center;
-    }
-     a:hover{
-         transition:1s;
-         background-color: #258cfb;
-     }
+a{
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #18BEAB;
+    color:white;
+    font-size:20px;
+    width:100px;
+    padding:20px;
+    text-align:center;
+}
+a:hover{
+    transition:1s;
+    background-color: #258cfb;
+ }
 #CMSSlickList{
-    padding-top:40px;
+     padding-top:40px;
 }

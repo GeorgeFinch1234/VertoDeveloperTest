@@ -5,16 +5,16 @@
 
 <form class="createForm" action="/CMS/editCompleted/@Model.ID" method="post" enctype="multipart/form-data">
     <div>
-        <label for="title" >title</label>
-        <input type="text" name="title"  value="@Model.Title" class="FormTitle"/>
+        <label for="title">Title</label>
+        <input type="text" name="title" value="@Model.Title" class="FormTitle" />
     </div>
     <div>
-        <label for="image" >image</label>
+        <label for="image">Image</label>
         <input type="file" name="image" accept=".png,.jpg" class="FormImg" />
     </div>
 
     <div class="createEditBtn">
-    <input type="submit" name="submit" aria-label="submit" />
+        <input type="submit" name="submit" aria-label="submit" />
         <a href="/cms/index">Cancel</a>
     </div>
 
@@ -25,7 +25,5 @@
 
 <div class="slickItem">
     <p class="outPutTitle">@Model.Title </p>
-    <img src="data:image/png;base64,@Convert.ToBase64String(Model.Img)" alt="Image" class="OutputImg"/>
+    <img src="data:image/png;base64,@Convert.ToBase64String(Model.Img)" alt="Image" class="OutputImg" />
 </div>
-
-

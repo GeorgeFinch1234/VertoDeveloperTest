@@ -1,3 +1,13 @@
+
+
+/*
+    font
+*/
+body *{
+    font-family: "Red Hat Display", sans-serif;
+    
+}
+
 html {
   font-size: 14px;
 }
@@ -21,17 +31,19 @@ body {
   margin: 20px;
   margin-top:0px;
 }
-
+/*
+    slick
+*/
 .slick-dots {
     position: absolute;
     z-index: 10;
     top: 90%;
     
 }
-    .slick-dots li button {
-        border: 1px solid white !important;
-        border-radius: 100%;
-    }
+.slick-dots li button {
+    border: 1px solid white !important;
+    border-radius: 100%;
+}
     /*
         gets rid of that white line under it
     */
@@ -63,6 +75,10 @@ body {
 input [type="file"] {
     width: 75%;
 }
+
+
+
+
 @media screen and (min-width: 768px) {
     .createForm :nth-child(1), .createForm :nth-child(2) {
         grid-column: span 1;
@@ -70,4 +86,6 @@ input [type="file"] {
     }
     
 }
+
+
 

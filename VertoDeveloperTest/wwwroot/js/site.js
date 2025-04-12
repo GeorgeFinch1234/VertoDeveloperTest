@@ -2,9 +2,11 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+
 const inputTitle = document.querySelector('.FormTitle');
 const displayTitle = document.querySelector('.outPutTitle');
-const inputImg  = document.querySelector('.FormImg');
+const inputImg = document.querySelector('.FormImg');
 const displayImg = document.querySelector('.OutputImg');
 inputTitle.addEventListener('input', ev => {
     displayTitle.textContent = inputTitle.value;
@@ -22,3 +24,12 @@ inputImg.addEventListener('change', function () {
         reader.readAsDataURL(file);
     }
 });
+
+
+
+
+
+
+
+
+
