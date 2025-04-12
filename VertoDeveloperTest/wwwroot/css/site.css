@@ -88,10 +88,15 @@ body {
     
 }
 
-input [type="file"] {
-    width: 75%;
+form{
+    border-bottom:solid 1px black;
+    
 }
 
+.FormImg{
+    width:300px;
+   
+}
 /*
     here to rempve duplication
 */
