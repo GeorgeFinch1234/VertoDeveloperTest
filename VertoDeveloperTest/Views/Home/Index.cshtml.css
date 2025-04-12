@@ -22,16 +22,16 @@
     min-width:100%;
     min-height:100%;
 }
-    .slickItem p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index:2;
-        color:white;
-        text-align:center;
-        font-size:45px;
-    }
+.slickItem p {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index:2;
+     color:white;
+     text-align:center;
+     font-size:45px;
+}
   
     /*
         four circles
@@ -52,7 +52,7 @@
     position: absolute;
     top:0px;
     right: 0px;
-transform:translate(0%,-50%);
+    transform:translate(0%,-50%);
     z-index:2;
     border-radius:15px 0px 15px 15px;
     
@@ -82,9 +82,9 @@ transform:translate(0%,-50%);
 }
 #LatestWorkExamples{
     display:flex;
- align-items:center;
- justify-content:space-around;
- gap:20px;
+    align-items:center;
+    justify-content:space-around;
+    gap:20px;
 
 
    
@@ -139,29 +139,30 @@ transform:translate(0%,-50%);
     overflow: hidden;
     height: 600px;
 }
-    #discoverMore img{
-        filter:brightness(70%);
-        min-width:100%;
-    }
-    #discoverMoreText {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width:75%;
-    }
-        #discoverMoreText :not(.btn){
-            padding-bottom:25px;
-        }
-        #discoverMoreText * {
-            color: white;
-        }
+#discoverMore img{
+    filter:brightness(70%);
+    min-width:100%;
+}
+#discoverMoreText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:75%;
+}
+#discoverMoreText :not(.btn){
+    padding-bottom:25px;
+}
+#discoverMoreText * {
+    color: white; 
+
+}
     
         /*
             footer
@@ -190,12 +191,12 @@ footer *{
 #topMidFooterInfo{
     border-bottom:1px solid white;
 }
-    #topMidFooterInfo div, #bottomMidFooterInfo div{
-                display:flex;
-        flex-direction:column;
+#topMidFooterInfo div, #bottomMidFooterInfo div{
+     display:flex;
+     flex-direction:column;
         
       
-    }
+}
 
 #topMidFooterInfo div {
     padding-bottom: 20px;
@@ -208,8 +209,42 @@ footer img{
     header
 */
 #menuBar {
-    display: none;
+    display:flex;
+    flex-direction:column;
+    z-index:100;
+    background-color:#18BEAB;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    opacity:90%;
+    right:-200vw;
+    align-items:center;
+    justify-content:space-around;
+    transition:1s;
+    bottom:0px;
+   
 }
+.show{
+    right:0px !important;
+    
+}
+#menuBar *{
+    font-size:30px;
+    width:100%;
+    text-align:center;
+    padding:20px 0px 20px 0px;
+
+}
+#hamburger{
+    z-index:1001;
+    position:relative;
+    
+}
+    #menuBar a:hover {
+        transition: 1s;
+        background-color: #258cfb;
+    }
+   
 #mobileOptions {
     display: flex;
     align-items: end;
@@ -219,6 +254,8 @@ footer img{
     top: 50%;
     font-size: 25px;
 }
+        
+    
 header img{
    position:absolute;
    top:50%;
@@ -229,10 +266,10 @@ header{
     height:150px;
 }
 #HaveAProject{
-position:absolute;
-top:0px;
-right:10px;
-border-radius: 0px 0px 20px 20px;
+    position:absolute;
+    top:0px;
+    right:10px;
+    border-radius: 0px 0px 20px 20px;
 
 }
 /*
@@ -264,7 +301,7 @@ h2 {
         example work
     */
     #LWE2{
-        display:block;
+       display:block;
     }
    #LatestWorkExamples{
        justify-content:center;
@@ -316,7 +353,7 @@ h2 {
         global
     */
     h2{
-                font-size: 50px;
+        font-size: 50px;
     }
     p{
         font-size:20px;
@@ -341,7 +378,7 @@ h2 {
         align-items:center;
     }
     #topMidFooterInfo{
-border-bottom:0px;
+        border-bottom:0px;
     }
     #topFooterInfo{
         flex-direction:row;
@@ -380,23 +417,42 @@ border-bottom:0px;
     /*
         header
     */
-
+    
     #menuBar {
-        display: flex;
+        flex-direction:row;
         gap: 20px;
         justify-content: end;
+        position:initial;
+        background-color: transparent;
+        
+        height:30px;
+        align-items: center;
     }
+    #menuBar *{
+        font-size:20px;
+        width:fit-content;
+        
+    }
+        
     #hamburger{
         display:none;
     }
     #Home{
         color: #DDB62E;
     }
+    #mobileOptions{
+        align-items:center;
+        
+    }
+    #menuBar a:hover {
+        transition: 1s;
+        background-color: transparent;
+    }
     /*
         four area
     */
     #fourAreas {
-      justify-content:center;
+        justify-content:center;
         gap:100px;
     }
     
