@@ -1,2 +1,27 @@
 ﻿body {
 }
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px
+}
+
+
+label, p, input {
+    font-size: 20px
+}
+
+
+a, input[type=submit] {
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #18BEAB;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    border: none;
+}
+
+

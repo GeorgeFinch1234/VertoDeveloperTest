@@ -4,7 +4,7 @@
     overflow:hidden;
     border-radius:20px 20px 0px 0px;
     width:100%;
-    height:700px;
+    height:600px;
     position:relative;
     margin-bottom:0;
     
@@ -12,24 +12,7 @@
 .slick{
     margin-bottom:0 !important;
 }
-.slickItem img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    filter: brightness(70%);
-}
-    .slickItem p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index:2;
-        color:white;
-        text-align:center;
-        font-size:45px;
-    }
+
   
     /*
         four circles
@@ -38,6 +21,10 @@
     background-color:#f4f4f4;
     position:relative;
     padding-top:60px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 #fourCricle img {
     width: 100%;
@@ -46,7 +33,7 @@
     position: absolute;
     top:0px;
     right: 0px;
-transform:translate(0%,-50%);
+    transform:translate(0%,-50%);
     z-index:2;
     border-radius:15px 0px 15px 15px;
     
@@ -76,9 +63,9 @@ transform:translate(0%,-50%);
 }
 #LatestWorkExamples{
     display:flex;
- align-items:center;
- justify-content:space-around;
- gap:20px;
+    align-items:center;
+    justify-content:space-around;
+    gap:20px;
 
 
    
@@ -133,28 +120,30 @@ transform:translate(0%,-50%);
     overflow: hidden;
     height: 600px;
 }
-    #discoverMore img{
-        filter:brightness(70%);
-    }
-    #discoverMoreText {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width:75%;
-    }
-        #discoverMoreText :not(.btn){
-            padding-bottom:25px;
-        }
-        #discoverMoreText * {
-            color: white;
-        }
+#discoverMore img{
+    filter:brightness(70%);
+    min-width:100%;
+}
+#discoverMoreText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:75%;
+}
+#discoverMoreText :not(.btn){
+    padding-bottom:25px;
+}
+#discoverMoreText * {
+    color: white; 
+
+}
     
         /*
             footer
@@ -163,6 +152,7 @@ footer {
     background-color: #333333;
     border-radius: 0px 0px 20px 20px;
     padding: 20px;
+    position:relative;
 }
 
 footer *{
@@ -182,23 +172,60 @@ footer *{
 #topMidFooterInfo{
     border-bottom:1px solid white;
 }
-    #topMidFooterInfo div, #bottomMidFooterInfo div{
-                display:flex;
-        flex-direction:column;
+#topMidFooterInfo div, #bottomMidFooterInfo div{
+     display:flex;
+     flex-direction:column;
         
       
-    }
+}
 
 #topMidFooterInfo div {
     padding-bottom: 20px;
 }
-     
+
+footer img{
+    width:100px;
+}
 /*
     header
 */
-#menuBar{
-    display:none;
+#menuBar {
+    display:flex;
+    flex-direction:column;
+    z-index:100;
+    background-color:#18BEAB;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    opacity:90%;
+    right:-200vw;
+    align-items:center;
+    justify-content:space-around;
+    transition:1s;
+    bottom:0px;
+   
 }
+.show{
+    right:0px !important;
+    
+}
+#menuBar *{
+    font-size:30px;
+    width:100%;
+    text-align:center;
+    padding:20px 0px 20px 0px;
+
+}
+#hamburger{
+    z-index:1001;
+    position:relative;
+    
+}
+    #menuBar a:hover {
+        transition: 1s;
+        background-color: #258cfb;
+    }
+   
 #mobileOptions {
     display: flex;
     align-items: end;
@@ -208,6 +235,8 @@ footer *{
     top: 50%;
     font-size: 25px;
 }
+        
+    
 header img{
    position:absolute;
    top:50%;
@@ -218,10 +247,10 @@ header{
     height:150px;
 }
 #HaveAProject{
-position:absolute;
-top:0px;
-right:10px;
-border-radius: 0px 0px 20px 20px;
+    position:absolute;
+    top:0px;
+    right:10px;
+    border-radius: 0px 0px 20px 20px;
 
 }
 /*
@@ -253,7 +282,7 @@ h2 {
         example work
     */
     #LWE2{
-        display:block;
+       display:block;
     }
    #LatestWorkExamples{
        justify-content:center;
@@ -266,7 +295,7 @@ h2 {
     #fourAreas {
         flex-direction: row;
         height: fit-content;
-        justify-content: space-around;
+        justify-content:space-evenly;
         padding: 40px;
     }
     /*
@@ -286,6 +315,9 @@ h2 {
     /*
         four cricles
     */
+    #fourCricle{
+
+    }
     #fourCricleTop{
         padding:60px;
         width:90%;
@@ -294,19 +326,22 @@ h2 {
     #fourCricleNested{
         padding-left:60px;
     }
+    #fourCricle img {
+        width: 500px;
+    }
         
     /*
         global
     */
     h2{
-                font-size: 50px;
+        font-size: 50px;
     }
     p{
         font-size:20px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1076px) {
     /*
     Explore out latest work
 */
@@ -316,15 +351,31 @@ h2 {
     /*
         footer
     */
+
+    footer{
+        display:flex;
+        justify-content:center;
+        height:300px;
+        align-items:center;
+    }
     #topMidFooterInfo{
-border-bottom:0px;
+        border-bottom:0px;
     }
     #topFooterInfo{
         flex-direction:row;
         justify-content:center;
         gap:20px;
+        position:relative;
+        width:fit-content;
+        height:fit-content;
+        
         
        
+    }
+    #topFooterInfo img{
+        position:absolute;
+        left:0px;
+        top:-30px;
     }
     #topMidFooterInfo, #bottomMidFooterInfo{
         width:500px;
@@ -340,15 +391,50 @@ border-bottom:0px;
         justify-content:center;
         align-items:center;
     }
-    #menuBar{
-        display:flex;
-        gap:20px;
-        justify-content:end;
+
+    #fourCricleTop{
+        width:50%;
     }
+    /*
+        header
+    */
+    
+    #menuBar {
+        flex-direction:row;
+        gap: 20px;
+        justify-content: end;
+        position:initial;
+        background-color: transparent;
+        
+        height:30px;
+        align-items: center;
+    }
+    #menuBar *{
+        font-size:20px;
+        width:fit-content;
+        
+    }
+        
     #hamburger{
         display:none;
     }
     #Home{
         color: #DDB62E;
     }
+    #mobileOptions{
+        align-items:center;
+        
+    }
+    #menuBar a:hover {
+        transition: 1s;
+        background-color: transparent;
+    }
+    /*
+        four area
+    */
+    #fourAreas {
+        justify-content:center;
+        gap:100px;
+    }
+    
 }
