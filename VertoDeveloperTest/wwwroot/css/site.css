@@ -88,9 +88,14 @@ body {
     
 }
 
+form{
+    border-bottom:solid 1px black;
+    
+}
 
 .FormImg{
     width:300px;
+   
 }
 /*
     here to rempve duplication

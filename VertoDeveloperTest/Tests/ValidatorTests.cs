@@ -55,7 +55,7 @@ namespace VertoDeveloperTest.Tests
         {
             
             
-            Assert.AreEqual("", validator.ValidateTitle(""));
+            Assert.AreEqual("title must be a string", validator.ValidateTitle(""));
         }
 
 

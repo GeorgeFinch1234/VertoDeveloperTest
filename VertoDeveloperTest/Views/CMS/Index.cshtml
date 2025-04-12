@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<VertoDeveloperTest.Models.Carousel>
-    <a href="/CMS/create" id="Create">Create</a>
+<a href="/CMS/create" id="Create">Create</a>
     <a href="/" id="Home">Home</a>
     <div id="CMSSlickList">
 
     @{
-        if (Model is not null)
+        if (Model is not null && Model.Any())
         {
             foreach (var item in Model)
             {
@@ -16,10 +16,17 @@
                     <div class="cmsBtn">
                         <a href="/CMS/Delete/@item.ID">Delete</a>
                         <a href="/cms/edit/@item.ID">Edit</a>
-                    </div>
+                </div>
 
             }
+        } else {
+       
+        
+            <div id="noData"> 
+            <h1>No Data</h1>
+            <p>There is no data to display. Please create a new carousel item.</p>
+            </div>
         }
 
     }
-    </div>
+    </divid>
