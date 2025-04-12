@@ -1,22 +1,16 @@
 
 
 /*
-    font
+    font 
 */
 body *{
     font-family: "Red Hat Display", sans-serif;
-    
 }
 
 html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -51,7 +45,38 @@ body {
     height:100% !important;
 }
 
+.slickItem {
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    margin-bottom: 0;
+}
 
+
+
+    .slickItem img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+        filter: brightness(70%);
+    }
+
+    .slickItem p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: white;
+        text-align: center;
+        font-size: 45px !important;
+    }
 
 
 /*
@@ -76,8 +101,22 @@ input [type="file"] {
     width: 75%;
 }
 
+/*
+    here to rempve duplication
+*/
+.cmsBtn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
 
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .createForm :nth-child(1), .createForm :nth-child(2) {
