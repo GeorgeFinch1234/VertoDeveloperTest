@@ -12,26 +12,7 @@
 .slick{
     margin-bottom:0 !important;
 }
-.slickItem img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    filter: brightness(70%);
-    min-width:100%;
-    min-height:100%;
-}
-.slickItem p {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     z-index:2;
-     color:white;
-     text-align:center;
-     font-size:45px;
-}
+
   
     /*
         four circles

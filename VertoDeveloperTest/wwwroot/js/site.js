@@ -3,7 +3,7 @@
 
 // Write your JavaScript code.
 
-
+//create and edit to show what working on.
 const inputTitle = document.querySelector('.FormTitle');
 const displayTitle = document.querySelector('.outPutTitle');
 const inputImg = document.querySelector('.FormImg');
